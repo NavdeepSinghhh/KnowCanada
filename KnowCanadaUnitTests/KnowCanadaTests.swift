@@ -1,6 +1,6 @@
 //
-//  KnowCanadaTests.swift
-//  KnowCanadaTests
+//  KnowCanadaUnitTests.swift
+//  KnowCanadaUnitTests
 //
 //  Created by Navdeep's Mac on 3/3/18.
 //  Copyright © 2018 Navdeep. All rights reserved.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import KnowCanada
 
-class KnowCanadaTests: XCTestCase {
+class KnowCanadaUnitTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
