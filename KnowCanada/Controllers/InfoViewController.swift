@@ -14,6 +14,14 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        InfoRequestRouter().getSearchResults { (canadaInfo, errorMessage) in
+            if let canadaInfo = canadaInfo{
+                print("Total elements read = \(canadaInfo.rows.count)")
+                print("Title = \(canadaInfo.title)")
+            }else{
+                print(errorMessage)
+            }
+        }
     }
 }
 

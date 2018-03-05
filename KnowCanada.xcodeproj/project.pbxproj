@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A2526AC204D40F20028BC2F /* KnowCanadaMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2526AB204D40F20028BC2F /* KnowCanadaMockTests.swift */; };
+		9A2526B4204D416F0028BC2F /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2526B3204D416F0028BC2F /* MockURLSession.swift */; };
+		9A2526B7204D423C0028BC2F /* CanadaInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A2526B6204D423C0028BC2F /* CanadaInfo.json */; };
 		9A40B081204A3D7800C01BCD /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B080204A3D7800C01BCD /* InfoCell.swift */; };
 		9A40B088204A437500C01BCD /* CanadaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B087204A437500C01BCD /* CanadaInfo.swift */; };
 		9A40B08B204A4B5C00C01BCD /* InfoRequestGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B08A204A4B5C00C01BCD /* InfoRequestGenerator.swift */; };
 		9A40B094204A4C8000C01BCD /* KnowCanadaAsyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B093204A4C8000C01BCD /* KnowCanadaAsyncTests.swift */; };
+		9A40B09D204A92C100C01BCD /* InfoRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B09C204A92C100C01BCD /* InfoRequestRouter.swift */; };
 		9A5A2CBB2046C537008A4A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A2CBA2046C537008A4A72 /* AppDelegate.swift */; };
 		9A5A2CBD2046C537008A4A72 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A2CBC2046C537008A4A72 /* InfoViewController.swift */; };
 		9A5A2CC02046C537008A4A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5A2CBE2046C537008A4A72 /* Main.storyboard */; };
@@ -21,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A2526AE204D40F20028BC2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A5A2CAF2046C537008A4A72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A5A2CB62046C537008A4A72;
+			remoteInfo = KnowCanada;
+		};
 		9A40B096204A4C8000C01BCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A5A2CAF2046C537008A4A72 /* Project object */;
@@ -44,13 +55,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9AE0D876204C0F4E004E0B69 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9A2526A9204D40F20028BC2F /* KnowCanadaMockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnowCanadaMockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A2526AB204D40F20028BC2F /* KnowCanadaMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowCanadaMockTests.swift; sourceTree = "<group>"; };
+		9A2526AD204D40F20028BC2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A2526B3204D416F0028BC2F /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		9A2526B6204D423C0028BC2F /* CanadaInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CanadaInfo.json; sourceTree = "<group>"; };
 		9A40B080204A3D7800C01BCD /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		9A40B087204A437500C01BCD /* CanadaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaInfo.swift; sourceTree = "<group>"; };
 		9A40B08A204A4B5C00C01BCD /* InfoRequestGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRequestGenerator.swift; sourceTree = "<group>"; };
 		9A40B091204A4C8000C01BCD /* KnowCanadaAsyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnowCanadaAsyncTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A40B093204A4C8000C01BCD /* KnowCanadaAsyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowCanadaAsyncTests.swift; sourceTree = "<group>"; };
 		9A40B095204A4C8000C01BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A40B09C204A92C100C01BCD /* InfoRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRequestRouter.swift; sourceTree = "<group>"; };
 		9A5A2CB72046C537008A4A72 /* KnowCanada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowCanada.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5A2CBA2046C537008A4A72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A5A2CBC2046C537008A4A72 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +88,7 @@
 		9A5A2CC12046C537008A4A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A5A2CC42046C537008A4A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A5A2CC62046C537008A4A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A5A2CCB2046C537008A4A72 /* KnowCanadaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnowCanadaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A5A2CCB2046C537008A4A72 /* KnowCanadaUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnowCanadaUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5A2CCF2046C538008A4A72 /* KnowCanadaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowCanadaTests.swift; sourceTree = "<group>"; };
 		9A5A2CD12046C538008A4A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A5A2CD62046C538008A4A72 /* KnowCanadaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnowCanadaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +97,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9A2526A6204D40F20028BC2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A40B08E204A4C8000C01BCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,6 +135,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A2526AA204D40F20028BC2F /* KnowCanadaMockTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A2526AB204D40F20028BC2F /* KnowCanadaMockTests.swift */,
+				9A2526B8204D424C0028BC2F /* DummyData */,
+				9A2526AD204D40F20028BC2F /* Info.plist */,
+			);
+			path = KnowCanadaMockTests;
+			sourceTree = "<group>";
+		};
+		9A2526B8204D424C0028BC2F /* DummyData */ = {
+			isa = PBXGroup;
+			children = (
+				9A2526B6204D423C0028BC2F /* CanadaInfo.json */,
+			);
+			path = DummyData;
+			sourceTree = "<group>";
+		};
 		9A40B082204A428900C01BCD /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +183,7 @@
 			children = (
 				9A5A2CC12046C537008A4A72 /* Assets.xcassets */,
 				9A5A2CC62046C537008A4A72 /* Info.plist */,
+				9A2526B3204D416F0028BC2F /* MockURLSession.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -152,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				9A40B08A204A4B5C00C01BCD /* InfoRequestGenerator.swift */,
+				9A40B09C204A92C100C01BCD /* InfoRequestRouter.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -172,6 +229,7 @@
 				9A5A2CCE2046C538008A4A72 /* KnowCanadaUnitTests */,
 				9A5A2CD92046C538008A4A72 /* KnowCanadaUITests */,
 				9A40B092204A4C8000C01BCD /* KnowCanadaAsyncTests */,
+				9A2526AA204D40F20028BC2F /* KnowCanadaMockTests */,
 				9A5A2CB82046C537008A4A72 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -180,9 +238,10 @@
 			isa = PBXGroup;
 			children = (
 				9A5A2CB72046C537008A4A72 /* KnowCanada.app */,
-				9A5A2CCB2046C537008A4A72 /* KnowCanadaTests.xctest */,
+				9A5A2CCB2046C537008A4A72 /* KnowCanadaUnitTests.xctest */,
 				9A5A2CD62046C538008A4A72 /* KnowCanadaUITests.xctest */,
 				9A40B091204A4C8000C01BCD /* KnowCanadaAsyncTests.xctest */,
+				9A2526A9204D40F20028BC2F /* KnowCanadaMockTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,6 +281,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9A2526A8204D40F20028BC2F /* KnowCanadaMockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A2526B0204D40F20028BC2F /* Build configuration list for PBXNativeTarget "KnowCanadaMockTests" */;
+			buildPhases = (
+				9A2526A5204D40F20028BC2F /* Sources */,
+				9A2526A6204D40F20028BC2F /* Frameworks */,
+				9A2526A7204D40F20028BC2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A2526AF204D40F20028BC2F /* PBXTargetDependency */,
+			);
+			name = KnowCanadaMockTests;
+			productName = KnowCanadaMockTests;
+			productReference = 9A2526A9204D40F20028BC2F /* KnowCanadaMockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9A40B090204A4C8000C01BCD /* KnowCanadaAsyncTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A40B098204A4C8000C01BCD /* Build configuration list for PBXNativeTarget "KnowCanadaAsyncTests" */;
@@ -247,6 +324,7 @@
 				9A5A2CB32046C537008A4A72 /* Sources */,
 				9A5A2CB42046C537008A4A72 /* Frameworks */,
 				9A5A2CB52046C537008A4A72 /* Resources */,
+				9AE0D876204C0F4E004E0B69 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,9 +335,9 @@
 			productReference = 9A5A2CB72046C537008A4A72 /* KnowCanada.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9A5A2CCA2046C537008A4A72 /* KnowCanadaTests */ = {
+		9A5A2CCA2046C537008A4A72 /* KnowCanadaUnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9A5A2CE22046C538008A4A72 /* Build configuration list for PBXNativeTarget "KnowCanadaTests" */;
+			buildConfigurationList = 9A5A2CE22046C538008A4A72 /* Build configuration list for PBXNativeTarget "KnowCanadaUnitTests" */;
 			buildPhases = (
 				9A5A2CC72046C537008A4A72 /* Sources */,
 				9A5A2CC82046C537008A4A72 /* Frameworks */,
@@ -270,9 +348,9 @@
 			dependencies = (
 				9A5A2CCD2046C537008A4A72 /* PBXTargetDependency */,
 			);
-			name = KnowCanadaTests;
+			name = KnowCanadaUnitTests;
 			productName = KnowCanadaTests;
-			productReference = 9A5A2CCB2046C537008A4A72 /* KnowCanadaTests.xctest */;
+			productReference = 9A5A2CCB2046C537008A4A72 /* KnowCanadaUnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		9A5A2CD52046C538008A4A72 /* KnowCanadaUITests */ = {
@@ -303,6 +381,11 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Navdeep;
 				TargetAttributes = {
+					9A2526A8204D40F20028BC2F = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9A5A2CB62046C537008A4A72;
+					};
 					9A40B090204A4C8000C01BCD = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
@@ -338,14 +421,23 @@
 			projectRoot = "";
 			targets = (
 				9A5A2CB62046C537008A4A72 /* KnowCanada */,
-				9A5A2CCA2046C537008A4A72 /* KnowCanadaTests */,
+				9A5A2CCA2046C537008A4A72 /* KnowCanadaUnitTests */,
 				9A5A2CD52046C538008A4A72 /* KnowCanadaUITests */,
 				9A40B090204A4C8000C01BCD /* KnowCanadaAsyncTests */,
+				9A2526A8204D40F20028BC2F /* KnowCanadaMockTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9A2526A7204D40F20028BC2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A2526B7204D423C0028BC2F /* CanadaInfo.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A40B08F204A4C8000C01BCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -380,6 +472,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9A2526A5204D40F20028BC2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A2526AC204D40F20028BC2F /* KnowCanadaMockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A40B08D204A4C8000C01BCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,9 +492,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A40B09D204A92C100C01BCD /* InfoRequestRouter.swift in Sources */,
 				9A5A2CBD2046C537008A4A72 /* InfoViewController.swift in Sources */,
 				9A5A2CBB2046C537008A4A72 /* AppDelegate.swift in Sources */,
 				9A40B08B204A4B5C00C01BCD /* InfoRequestGenerator.swift in Sources */,
+				9A2526B4204D416F0028BC2F /* MockURLSession.swift in Sources */,
 				9A40B081204A3D7800C01BCD /* InfoCell.swift in Sources */,
 				9A40B088204A437500C01BCD /* CanadaInfo.swift in Sources */,
 			);
@@ -419,6 +521,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9A2526AF204D40F20028BC2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A5A2CB62046C537008A4A72 /* KnowCanada */;
+			targetProxy = 9A2526AE204D40F20028BC2F /* PBXContainerItemProxy */;
+		};
 		9A40B097204A4C8000C01BCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9A5A2CB62046C537008A4A72 /* KnowCanada */;
@@ -456,12 +563,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9A2526B1204D40F20028BC2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = KnowCanadaMockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Navdeep.KnowCanadaMockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KnowCanada.app/KnowCanada";
+			};
+			name = Debug;
+		};
+		9A2526B2204D40F20028BC2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = KnowCanadaMockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Navdeep.KnowCanadaMockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KnowCanada.app/KnowCanada";
+			};
+			name = Release;
+		};
 		9A40B099204A4C8000C01BCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J7285MX229;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KnowCanadaAsyncTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Navdeep.KnowCanadaAsyncTests;
@@ -477,7 +616,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J7285MX229;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KnowCanadaAsyncTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Navdeep.KnowCanadaAsyncTests;
@@ -536,7 +675,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -587,7 +726,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -600,6 +739,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/KnowCanada/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -615,6 +759,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/KnowCanada/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -631,7 +780,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KnowCanadaTests/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = KnowCanadaUnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Navdeep.KnowCanadaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -647,7 +797,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KnowCanadaTests/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = KnowCanadaUnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Navdeep.KnowCanadaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -662,6 +813,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KnowCanadaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Navdeep.KnowCanadaUITests;
@@ -677,6 +829,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KnowCanadaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Navdeep.KnowCanadaUITests;
@@ -690,6 +843,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9A2526B0204D40F20028BC2F /* Build configuration list for PBXNativeTarget "KnowCanadaMockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A2526B1204D40F20028BC2F /* Debug */,
+				9A2526B2204D40F20028BC2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9A40B098204A4C8000C01BCD /* Build configuration list for PBXNativeTarget "KnowCanadaAsyncTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -717,7 +879,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A5A2CE22046C538008A4A72 /* Build configuration list for PBXNativeTarget "KnowCanadaTests" */ = {
+		9A5A2CE22046C538008A4A72 /* Build configuration list for PBXNativeTarget "KnowCanadaUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A5A2CE32046C538008A4A72 /* Debug */,

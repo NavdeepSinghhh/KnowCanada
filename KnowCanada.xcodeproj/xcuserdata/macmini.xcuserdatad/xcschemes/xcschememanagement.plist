@@ -7,7 +7,30 @@
 		<key>KnowCanada.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9A40B090204A4C8000C01BCD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A5A2CB62046C537008A4A72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A5A2CCA2046C537008A4A72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A5A2CD52046C538008A4A72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
