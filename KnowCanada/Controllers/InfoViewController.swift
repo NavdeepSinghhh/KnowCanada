@@ -11,6 +11,8 @@ import UIKit
 class InfoViewController: UIViewController {
     // Identifier for Info Cell
     let infoCellIndentifier = "InfoCell"
+    @IBOutlet weak var infoTableView: UITableView!
+    var canadaInfo : CanadaInfo? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,8 @@ class InfoViewController: UIViewController {
             if let canadaInfo = canadaInfo{
                 print("Total elements read = \(canadaInfo.rows.count)")
                 print("Title = \(canadaInfo.title)")
+                self.canadaInfo = canadaInfo
+                self.infoTableView.reloadData()
             }else{
                 print(errorMessage)
             }
@@ -29,11 +33,23 @@ class InfoViewController: UIViewController {
 
 extension InfoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        if let canadaInfo = canadaInfo{
+            return canadaInfo.rows.count
+        }else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: InfoCell = tableView.dequeueReusableCell(withIdentifier: infoCellIndentifier, for: indexPath) as! InfoCell
+        let info: InfoModel = (canadaInfo?.rows[indexPath.row])!
+        if let _ = info.title{
+            cell.infoModel = info
+        }else{
+            cell.infoImageView.image = nil
+            cell.descriptionLabel.text = ""
+            cell.titleLabel.text = ""
+        }
         return cell
     }
 }
