@@ -48,6 +48,7 @@ class InfoViewController: UIViewController {
             case let .success(canadaInfo):
                 self.canadaInfo = canadaInfo
                 DispatchQueue.main.async {
+                    self.title = canadaInfo.title
                     self.infoTableView.reloadData()
                     self.refreshControl.endRefreshing()
                     self.activityIndicator.stopAnimating()
@@ -81,10 +82,6 @@ extension InfoViewController: UITableViewDataSource {
         let info: InfoModel = (canadaInfo?.rows[indexPath.row])!
         if let _ = info.title{
             cell.infoModel = info
-        }else{
-            cell.infoImageView.image = nil
-            cell.descriptionLabel.text = ""
-            cell.titleLabel.text = ""
         }
         return cell
     }

@@ -11,7 +11,7 @@ import UIKit
 
 struct CanadaInfo: Decodable {
     let title: String
-    let rows: [InfoModel]
+    var rows: [InfoModel]
     
     enum CodingKeys: String, CodingKey {
         case title

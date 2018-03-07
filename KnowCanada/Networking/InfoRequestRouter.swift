@@ -53,10 +53,11 @@ class InfoRequestRouter {
     // MARK: - Helper method to parse the response and populate the model
     fileprivate func updateSearchResults(_ data: Data, completion: QueryResult) {
         do {
-            canadaInfo = try decoder.decode(CanadaInfo.self, from: data)
-            if let info = canadaInfo{
-                completion(.success(info))
-            }
+            var canadaInfo = try decoder.decode(CanadaInfo.self, from: data)
+            let filteredElements = canadaInfo.rows.filter{ $0.title != nil }
+            canadaInfo.rows = filteredElements
+            self.canadaInfo = canadaInfo
+            completion(.success(canadaInfo))
         } catch _ as NSError {
             completion(.failure(.jsonParsingFailure))
             return

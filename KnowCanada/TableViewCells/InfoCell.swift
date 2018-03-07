@@ -50,6 +50,9 @@ class InfoCell: UITableViewCell {
         self.descriptionLabel.font = UIFont.preferredFont(forTextStyle: .body)
     }
     
+    // function to asynchronously load images inside the imageview
+    // if the image is present inside the local cache then no need to fetch from the internet
+    // if the call could not be completed then insert a default image for broken link
     func loadImageUsingURLString(urlString: String){
         
         imageUrlString = urlString

@@ -35,7 +35,6 @@ class KnowCanadaMockTests: XCTestCase {
         super.tearDown()
     }
     
-    
     // Testing to check if the call to fetch information results from the server returns success by mocking the response
     // right now we should get 14 objects and later as we refractor our code, the count will decrease
     // since we will filter out the nil values
@@ -54,6 +53,6 @@ class KnowCanadaMockTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
         
         // Then
-        XCTAssertEqual(infoRequestRouterUnderTest.canadaInfo?.rows.count, 14, "Coundn't parse properly")
+        XCTAssertEqual(infoRequestRouterUnderTest.canadaInfo?.rows.count, 13, "Coundn't parse properly")
     }
 }
