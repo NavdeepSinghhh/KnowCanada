@@ -23,7 +23,10 @@ Approx 75%
 In XCode menu bar goto>> Product and in the dropdown menu click test.
 
 ## Design Goal:
-Design consideration : Design goal is to mimimise dependencies between controllers and models. Fetch, filter and model data asynchronously and populate the views on the main queue and make use of protocol oriented principles of the swift language to maintain decent level of decoupling within the application logic.
+Design goal is to mimimise dependencies between controllers and models. Fetch, filter and model data asynchronously and populate the views on the main queue and make use of protocol oriented principles of the swift language to maintain decent level of decoupling within the application logic.
+
+## Design Consideration ##
+Minimise the use of third party API's. Hence no third party API's used.
 
 ### Repo Owner 
 Navdeep Singh
