@@ -9,6 +9,7 @@
 import Foundation.NSURL
 import UIKit
 
+// Model object to populate Info table view controller
 struct CanadaInfo: Decodable {
     let title: String
     var rows: [InfoModel]

@@ -53,6 +53,7 @@ class InfoCell: UITableViewCell {
     // function to asynchronously load images inside the imageview
     // if the image is present inside the local cache then no need to fetch from the internet
     // if the call could not be completed then insert a default image for broken link
+    // If the app extends in functionality, this method can be moved to a separate extension to make it accessible through out the app
     func loadImageUsingURLString(urlString: String){
         
         imageUrlString = urlString

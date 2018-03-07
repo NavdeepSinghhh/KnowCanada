@@ -12,8 +12,7 @@ import Foundation
     typealias FetchResult = Result<CanadaInfo, APIErrors>
 
 class InfoRequestRouter {
-    var canadaInfo: CanadaInfo? 
-    var errorMessage = ""
+    var canadaInfo: CanadaInfo?
     
     // MockURLSession intead or URLSession since we want to invoke this while running our mock tests
     lazy var defaultSession: MockURLSession = {

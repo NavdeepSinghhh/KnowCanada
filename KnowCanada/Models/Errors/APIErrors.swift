@@ -17,6 +17,7 @@ enum APIErrors : Error {
     case jsonParsingFailure
 }
 
+// generic return type from the API call. 
 enum Result <Value, Error> {
     case success(Value)
     case failure(Error)
