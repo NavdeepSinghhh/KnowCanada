@@ -60,7 +60,7 @@ class InfoViewController: UIViewController {
         }
     }
     
-   @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         viewWillAppear(false)
     }
 }

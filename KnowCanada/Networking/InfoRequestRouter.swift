@@ -51,7 +51,7 @@ class InfoRequestRouter {
     }
     
     // MARK: - Helper method to parse the response and populate the model
-    fileprivate func updateSearchResults(_ data: Data, completion: QueryResult) {
+    func updateSearchResults(_ data: Data, completion: QueryResult) {
         do {
             var canadaInfo = try decoder.decode(CanadaInfo.self, from: data)
             let filteredElements = canadaInfo.rows.filter{ $0.title != nil }

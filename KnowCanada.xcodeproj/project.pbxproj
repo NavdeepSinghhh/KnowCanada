@@ -25,6 +25,7 @@
 		9AB67E86204FEA17002FD6A6 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB67E85204FEA17002FD6A6 /* APIErrors.swift */; };
 		9AB67E89205007AF002FD6A6 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB67E88205007AF002FD6A6 /* String+Extensions.swift */; };
 		9AB67E8D20500BFD002FD6A6 /* broken_url.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB67E8C20500BFD002FD6A6 /* broken_url.png */; };
+		9AB67E9120508EC8002FD6A6 /* CanadaInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AB67E9020508EC7002FD6A6 /* CanadaInfo.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		9AB67E85204FEA17002FD6A6 /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		9AB67E88205007AF002FD6A6 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "KnowCanada/SupportingFiles/Extensions/String+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		9AB67E8C20500BFD002FD6A6 /* broken_url.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = broken_url.png; sourceTree = "<group>"; };
+		9AB67E9020508EC7002FD6A6 /* CanadaInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CanadaInfo.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				9A5A2CCF2046C538008A4A72 /* KnowCanadaTests.swift */,
+				9AB67E9220508EDB002FD6A6 /* DummyData */,
 				9A5A2CD12046C538008A4A72 /* Info.plist */,
 			);
 			path = KnowCanadaUnitTests;
@@ -309,6 +312,14 @@
 				9A2526B3204D416F0028BC2F /* MockURLSession.swift */,
 			);
 			path = TestHelpers;
+			sourceTree = "<group>";
+		};
+		9AB67E9220508EDB002FD6A6 /* DummyData */ = {
+			isa = PBXGroup;
+			children = (
+				9AB67E9020508EC7002FD6A6 /* CanadaInfo.json */,
+			);
+			path = DummyData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB67E9120508EC8002FD6A6 /* CanadaInfo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
