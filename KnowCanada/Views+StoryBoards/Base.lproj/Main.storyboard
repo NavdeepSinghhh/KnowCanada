@@ -22,29 +22,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="263" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aHX-va-5Wz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="264" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aHX-va-5Wz">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="InfoCell" rowHeight="250" id="cQY-ss-Qkb" userLabel="InfoCell" customClass="InfoCell" customModule="KnowCanada" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22" width="414" height="250"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="InfoCell" rowHeight="264" id="cQY-ss-Qkb" userLabel="InfoCell" customClass="InfoCell" customModule="KnowCanada" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="22" width="414" height="264"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cQY-ss-Qkb" id="d1P-hl-BTu">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="249.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="263.66666666666669"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aIv-BA-lIs">
-                                                    <rect key="frame" x="8" y="5" width="398" height="185.66666666666666"/>
+                                                    <rect key="frame" x="8" y="5" width="398" height="199.66666666666666"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIh-Cg-uLv">
-                                                    <rect key="frame" x="8" y="195.66666666666666" width="398" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIh-Cg-uLv">
+                                                    <rect key="frame" x="8" y="209.66666666666666" width="398" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hP3-QM-pgB">
-                                                    <rect key="frame" x="8" y="221.66666666666666" width="398" height="18"/>
+                                                    <rect key="frame" x="8" y="235.66666666666666" width="398" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -76,17 +76,24 @@
                                     <outlet property="delegate" destination="aUB-Tj-8ao" id="qs1-CN-ol0"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bSO-YH-OCw">
+                                <rect key="frame" x="188" y="350" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="bSO-YH-OCw" firstAttribute="centerX" secondItem="dyw-RG-e66" secondAttribute="centerX" id="3Zv-ry-Fvb"/>
                             <constraint firstItem="aHX-va-5Wz" firstAttribute="top" secondItem="wd1-gB-vhR" secondAttribute="bottom" id="ET6-N0-hBy"/>
                             <constraint firstAttribute="trailing" secondItem="aHX-va-5Wz" secondAttribute="trailing" id="Ox8-f5-piB"/>
                             <constraint firstItem="Vyt-G6-k1Y" firstAttribute="top" secondItem="aHX-va-5Wz" secondAttribute="bottom" id="jBJ-tg-Ncm"/>
+                            <constraint firstItem="bSO-YH-OCw" firstAttribute="centerY" secondItem="dyw-RG-e66" secondAttribute="centerY" id="mUg-WR-oHX"/>
                             <constraint firstItem="aHX-va-5Wz" firstAttribute="leading" secondItem="dyw-RG-e66" secondAttribute="leading" id="u5s-I4-dGU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="6Wm-Cv-hAx"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="bSO-YH-OCw" id="qrL-1V-p3W"/>
                         <outlet property="infoTableView" destination="aHX-va-5Wz" id="FWo-dJ-QXC"/>
                     </connections>
                 </viewController>

@@ -40,6 +40,16 @@ class InfoCell: UITableViewCell {
         }
     }
     
+    override func layoutSubviews() {
+        infoImageView.contentMode = .scaleAspectFit
+        infoImageView.clipsToBounds = true
+        titleLabel.sizeToFit()
+        descriptionLabel.sizeToFit()
+        
+        self.titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        self.descriptionLabel.font = UIFont.preferredFont(forTextStyle: .body)
+    }
+    
     func loadImageUsingURLString(urlString: String){
         
         imageUrlString = urlString
@@ -55,8 +65,11 @@ class InfoCell: UITableViewCell {
         }
         
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-            if let error = error {
-                print(error)
+            if let _ = error {
+                DispatchQueue.main.async {
+                    // if the request could not load then show a broken url image
+                    self.infoImageView.image = #imageLiteral(resourceName: "broken_url.png")
+                }
                 return
             } else if let data = data,
                 let response = response as? HTTPURLResponse,
@@ -68,6 +81,10 @@ class InfoCell: UITableViewCell {
                         }
                         self.imageCache.setObject(imageToBeStoredInCache, forKey: urlString as NSString)
                     }
+                }
+            }else{
+                DispatchQueue.main.async {
+                    self.infoImageView.image = #imageLiteral(resourceName: "broken_url.png")
                 }
             }
         }).resume()

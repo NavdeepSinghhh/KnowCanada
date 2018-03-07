@@ -10,14 +10,20 @@ import XCTest
 @testable import KnowCanada
 
 class KnowCanadaUnitTests: XCTestCase {
+    var heightForTestString: CGFloat!
+    let testString = "String to Test"
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        heightForTestString = testString.height(withConstrainedWidth: 320, font: UIFont.preferredFont(forTextStyle: .headline))
+    }
+    
+    func testHeightOfStringAsExpected(){
+        XCTAssertEqual(heightForTestString, CGFloat(20), "Height is not as expected")
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        heightForTestString = nil
         super.tearDown()
     }
     

@@ -48,7 +48,7 @@ class KnowCanadaMockTests: XCTestCase {
         XCTAssertNil(infoRequestRouterUnderTest.canadaInfo?.rows.count)
         // or we can assert equality
         XCTAssertEqual(infoRequestRouterUnderTest.canadaInfo?.rows.count, nil, "Empty properties array before the task begins")
-        infoRequestRouterUnderTest.getSearchResults{_,_  in
+        infoRequestRouterUnderTest.getSearchResults { (result) in
             promise.fulfill()
         }
         waitForExpectations(timeout: 5, handler: nil)

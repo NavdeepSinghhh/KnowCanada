@@ -9,25 +9,61 @@
 import UIKit
 
 class InfoViewController: UIViewController {
+    
     // Identifier for Info Cell
     let infoCellIndentifier = "InfoCell"
-    @IBOutlet weak var infoTableView: UITableView!
+    
+    // MARK: - properties of the VC
     var canadaInfo : CanadaInfo? = nil
+    
+    // MARK: - private constants to avoid magic numbers
+    fileprivate let estimatedRowHeight: CGFloat = 250
+    
+    // MARK: - View elements inside the View
+    @IBOutlet weak var infoTableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(self.handleRefresh(_:)),
+                                 for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.red
+        return refreshControl
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        InfoRequestRouter().getSearchResults { (canadaInfo, errorMessage) in
-            if let canadaInfo = canadaInfo{
-                print("Total elements read = \(canadaInfo.rows.count)")
-                print("Title = \(canadaInfo.title)")
+        // TableView view related settings
+        infoTableView.allowsSelection = false
+        infoTableView.separatorStyle = .none
+        infoTableView.addSubview(self.refreshControl)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // start activity spinner
+        self.activityIndicator.startAnimating()
+        // Fetch data from the API
+        InfoRequestRouter().getSearchResults { result in
+            switch result {
+            case let .success(canadaInfo):
                 self.canadaInfo = canadaInfo
-                self.infoTableView.reloadData()
-            }else{
-                print(errorMessage)
+                DispatchQueue.main.async {
+                    self.infoTableView.reloadData()
+                    self.refreshControl.endRefreshing()
+                    self.activityIndicator.stopAnimating()
+                }
+            // We had handle the error more precisely rather then just printing to console.
+            // The specific type of error can generate specific error for the user
+            case let .failure(error) : print(error)
             }
         }
     }
+    
+   @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        viewWillAppear(false)
+    }
 }
+
 
 // MARK: - UITableViewDataSource
 
@@ -58,9 +94,16 @@ extension InfoViewController: UITableViewDataSource {
 
 extension InfoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        var height : CGFloat = 200
+        let info: InfoModel = (canadaInfo?.rows[indexPath.row])!
+        // TODO: Fix the magic numbers
+        if let title = info.title{
+            height += title.height(withConstrainedWidth: self.infoTableView.frame.width, font: UIFont.preferredFont(forTextStyle: .headline))
+        }
+        if let description = info.description{
+            height += description.height(withConstrainedWidth: self.infoTableView.frame.width, font: UIFont.preferredFont(forTextStyle: .footnote))
+        }
+        return height
     }
-    
-    
 }
 

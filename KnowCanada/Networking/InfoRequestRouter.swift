@@ -7,9 +7,11 @@
 //
 
 import Foundation
+
+    typealias QueryResult = (_ result : FetchResult) -> Void
+    typealias FetchResult = Result<CanadaInfo, APIErrors>
+
 class InfoRequestRouter {
-    
-    typealias QueryResult = (CanadaInfo?, String) -> ()
     var canadaInfo: CanadaInfo? 
     var errorMessage = ""
     
@@ -28,15 +30,20 @@ class InfoRequestRouter {
         dataTask = defaultSession.dataTask(with: request) { data, response, error in
             defer { self.dataTask = nil }
             if let error = error {
-                self.errorMessage += "DataTask error: " + error.localizedDescription + "\n"
+                completion(.failure(.requestFailed(error: error as NSError)))
+                return
             } else if let data = data,
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
-                print(data)
-                print(String(data: data, encoding:.isoLatin1)!)
-                self.updateSearchResults(String(data:data, encoding:.isoLatin1)!.data(using: .utf8)!)
-                DispatchQueue.main.async {
-                    completion(self.canadaInfo, self.errorMessage)
+                self.updateSearchResults(String(data:data, encoding:.isoLatin1)!.data(using: .utf8)!){ result in
+                    switch result {
+                    case let .success(canadaInfo): completion(.success(canadaInfo))
+                    case let .failure(error) : completion(.failure(error))
+                    }
+                }
+            }else{
+                if (response as? HTTPURLResponse) != nil{
+                    completion(.failure(.responseUnsuccessful))
                 }
             }
         }
@@ -44,12 +51,14 @@ class InfoRequestRouter {
     }
     
     // MARK: - Helper method to parse the response and populate the model
-    fileprivate func updateSearchResults(_ data: Data) {
+    fileprivate func updateSearchResults(_ data: Data, completion: QueryResult) {
         do {
-            let canadaInfo = try decoder.decode(CanadaInfo.self, from: data)
-            self.canadaInfo = canadaInfo
-        } catch let decodeError as NSError {
-            errorMessage += "Decoder error: \(decodeError.localizedDescription)"
+            canadaInfo = try decoder.decode(CanadaInfo.self, from: data)
+            if let info = canadaInfo{
+                completion(.success(info))
+            }
+        } catch _ as NSError {
+            completion(.failure(.jsonParsingFailure))
             return
         }
     }

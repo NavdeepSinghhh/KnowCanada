@@ -7,6 +7,7 @@
 //
 
 import Foundation.NSURL
+import UIKit
 
 struct CanadaInfo: Decodable {
     let title: String
@@ -23,3 +24,5 @@ struct InfoModel: Decodable {
     let description: String?
     let imageHref: String?
 }
+
+
